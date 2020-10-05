@@ -1,5 +1,7 @@
 # FROM python:3
-FROM sharptrick/sage-notebook
+# FROM sharptrick/sage-notebook
+FROM cemulate/sagemath-jupyterlab
+
 
 RUN pip install papermill[all]
 RUN pip install jupyter jupyterhub
