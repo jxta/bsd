@@ -3,7 +3,7 @@
 FROM cemulate/sagemath-jupyterlab
 
 RUN sudo apt-get update
-RUN sudo apt-get install python3-pip -y
+RUN sudo apt-get install python-pip -y
 RUN pip install papermill[all]
 RUN pip install jupyter jupyterhub
 
