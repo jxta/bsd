@@ -2,6 +2,7 @@ FROM sagemath/sagemath-jupyter
 
 RUN sudo apt-get update
 RUN sudo apt-get install python-pip -y
+RUN sudo apt-get install python3 -y
 RUN pip install --upgrade pip
 RUN pip install papermill[all]
 RUN pip install jupyter jupyterhub
