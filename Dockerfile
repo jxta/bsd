@@ -2,7 +2,7 @@
 # FROM sharptrick/sage-notebook
 FROM cemulate/sagemath-jupyterlab
 
-
+RUN apt-get install pip
 RUN pip install papermill[all]
 RUN pip install jupyter jupyterhub
 
