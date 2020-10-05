@@ -1,7 +1,7 @@
 FROM python:3
 
 RUN pip install papermill[all]
-RUN pip install jupyter　jupyterhub
+RUN pip install jupyter jupyterhub
 
 ARG NB_USER=jovyan
 ARG NB_UID=1000
