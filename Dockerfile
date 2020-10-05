@@ -1,9 +1,20 @@
-# Dockerfile for binder
-# Reference: https://mybinder.readthedocs.io/en/latest/dockerfile.html#preparing-your-dockerfile
+FROM python:3
 
-FROM sagemath/sagemath:9.1-py3
+RUN pip install papermill[all]
+RUN pip install jupyter
 
-RUN sage -pip install jupyterlab jupyterhub notebook_autorun papermill
+ARG NB_USER=jovyan
+ARG NB_UID=1000
+ENV USER ${NB_USER}
+ENV NB_UID ${NB_UID}
+ENV HOME /home/${NB_USER}
 
-# Copy the contents of the repo in ${HOME}
-COPY --chown=sage:sage . ${HOME}
+RUN adduser --disabled-password \
+    --gecos "Default user" \
+    --uid ${NB_UID} \
+    ${NB_USER}
+
+COPY . ${HOME}
+USER root
+RUN chown -R ${NB_UID} ${HOME}
+USER ${NB_USER}
