@@ -17,5 +17,6 @@ RUN adduser --disabled-password \
 COPY . ${HOME}
 USER root
 RUN chown -R ${NB_UID} ${HOME}
+RUN pip install sagemath
 RUN jupyter kernelspec install ./SageMath/local/share/jupyter/kernels/sagemath
 USER ${NB_USER}
