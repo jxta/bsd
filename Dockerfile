@@ -2,6 +2,8 @@ FROM sharptrick/sage-notebook
 
 RUN pip install papermill[all]
 RUN pip install jupyter jupyterhub
+RUN pip install ipykernel
+RUN ipython kernel install --user --name=papermill-tutorial
 
 ARG NB_USER=jovyan
 ARG NB_UID=1000
