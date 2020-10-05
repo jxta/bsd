@@ -19,7 +19,5 @@ COPY . ${HOME}
 USER root
 RUN chown -R ${NB_UID} ${HOME}
 USER ${NB_USER}
-RUN conda install -n sagemath jupyter
-RUN conda activate sagemath
-RUN jupyter kernelspec install --user --name sagemath /opt/conda/envs/sage
+
 
