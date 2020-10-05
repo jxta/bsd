@@ -5,7 +5,7 @@ RUN pip install jupyter
 
 ENV NB_USER jovyan
 ENV NB_GROUP users
-ENV HOME /home/${NB_USER}
+ENV HOME /tmp
 
 ENV NB_UID=1000
 
