@@ -7,5 +7,7 @@ ENV NB_USER jovyan
 ENV NB_GROUP users
 ENV HOME /home/${NB_USER}
 
+ENV NB_UID=1000
+
 RUN chown -R ${NB_UID} ${HOME}
 USER ${NB_USER}
