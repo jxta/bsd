@@ -1,5 +1,3 @@
-FROM python:3
-
 ARG SAGE_VERSION=9.0
 ARG SAGE_PYTHON_VERSION=3.7
 ARG BASE_CONTAINER=jupyter/minimal-notebook
