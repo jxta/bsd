@@ -1,4 +1,5 @@
-FROM python:3
+# FROM python:3
+FROM sharptrick/sage-notebook
 
 RUN pip install papermill[all]
 RUN pip install jupyter jupyterhub
@@ -17,6 +18,4 @@ RUN adduser --disabled-password \
 COPY . ${HOME}
 USER root
 RUN chown -R ${NB_UID} ${HOME}
-RUN pip install sagemath
-# RUN jupyter kernelspec install ./SageMath/local/share/jupyter/kernels/sagemath
 USER ${NB_USER}
