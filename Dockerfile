@@ -5,6 +5,7 @@ RUN pip install jupyter
 
 ENV NB_USER jovyan
 ENV NB_GROUP users
+ENV HOME /home/${NB_USER}
 
 RUN chown -R ${NB_UID} ${HOME}
 USER ${NB_USER}
