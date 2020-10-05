@@ -3,9 +3,9 @@
 FROM cemulate/sagemath-jupyterlab
 
 RUN sudo apt-get update
-RUN sudo apt-get install python-pip -y
-RUN pip install papermill[all]
-RUN pip install jupyter jupyterhub
+RUN sudo apt-get install python3-pip -y
+RUN pip3 install papermill[all]
+RUN pip3 install jupyter jupyterhub
 
 ARG NB_USER=jovyan
 ARG NB_UID=1000
