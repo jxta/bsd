@@ -1,4 +1,4 @@
-FROM sagemath/sagemath-jupyter
+FROM sharptrick/sage-notebook
 
 RUN sudo apt-get update
 RUN sudo apt-get install python-pip -y
