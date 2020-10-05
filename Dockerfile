@@ -3,7 +3,7 @@
 
 FROM sagemath/sagemath:9.1-py3
 
-RUN sage -pip install jupyterlab jupyterhub notebook_autorun
+RUN sage -pip install jupyterlab jupyterhub notebook_autorun papermill
 
 # Copy the contents of the repo in ${HOME}
 COPY --chown=sage:sage . ${HOME}
