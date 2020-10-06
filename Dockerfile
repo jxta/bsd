@@ -2,7 +2,6 @@ FROM jupyter/datascience-notebook
 
 RUN pip install papermill[all]
 RUN pip install jupyter jupyterhub
-RUN pip install ipykernel
 
 ARG NB_USER=jovyan
 ARG NB_UID=1000
