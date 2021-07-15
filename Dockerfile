@@ -1,4 +1,5 @@
-FROM jupyter/datascience-notebook
+# FROM jupyter/datascience-notebook
+FROM graphviz/graphviz
 
 RUN pip install papermill[all]
 RUN pip install jupyter jupyterhub ethercalc-python
@@ -16,8 +17,6 @@ ENV HOME /home/${NB_USER}
 
 COPY . ${HOME}
 USER root
-RUN sudo apt update
-RUN sudo apt install graphviz -y
 RUN chown -R ${NB_UID} ${HOME}
 USER ${NB_USER}
 
