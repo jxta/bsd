@@ -16,6 +16,7 @@ ENV HOME /home/${NB_USER}
 
 COPY . ${HOME}
 USER root
+RUN sudo apt-get install -y graphviz
 RUN chown -R ${NB_UID} ${HOME}
 USER ${NB_USER}
 
