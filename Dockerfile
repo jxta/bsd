@@ -17,7 +17,7 @@ ENV HOME /home/${NB_USER}
 COPY . ${HOME}
 USER root
 RUN sudo apt update
-RUN sudo apt install python-pydot python-pydot-ng graphviz -y
+RUN sudo apt install graphviz -y
 RUN chown -R ${NB_UID} ${HOME}
 USER ${NB_USER}
 
