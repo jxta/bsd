@@ -1,5 +1,5 @@
 # FROM jupyter/datascience-notebook
-FROM graphviz/graphviz
+FROM minidocks/graphviz
 
 # RUN pip install papermill[all]
 # RUN pip install jupyter jupyterhub ethercalc-python
