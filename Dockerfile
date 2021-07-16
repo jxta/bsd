@@ -1,8 +1,10 @@
-# FROM jupyter/datascience-notebook
-FROM minidocks/graphviz
+FROM jupyter/datascience-notebook
+# FROM minidocks/graphviz
 
-# RUN pip install papermill[all]
-# RUN pip install jupyter jupyterhub ethercalc-python
+RUN pip install papermill[all] 
+RUN pip install jupyter jupyterhub ethercalc-python
+RUN pip install networkx graphillion
+
 
 ARG NB_USER=jovyan
 ARG NB_UID=1000
