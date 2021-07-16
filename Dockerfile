@@ -3,7 +3,7 @@ FROM jupyter/datascience-notebook
 
 RUN pip install papermill[all] 
 RUN pip install jupyter jupyterhub ethercalc-python
-RUN pip install networkx graphillion
+RUN pip install networkx graphillion graphviz
 
 
 ARG NB_USER=jovyan
