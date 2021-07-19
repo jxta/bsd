@@ -1,7 +1,7 @@
 FROM jupyter/datascience-notebook
 # FROM minidocks/graphviz
 
-RUN	sudo apt-get install git-annex
+RUN	sudo apt-get install git-annex -y
   
 RUN pip install papermill[all] 
 RUN pip install jupyter jupyterhub ethercalc-python
