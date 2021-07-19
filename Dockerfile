@@ -1,6 +1,8 @@
 FROM jupyter/datascience-notebook
 # FROM minidocks/graphviz
 
+RUN	apt-get install git-annex
+  
 RUN pip install papermill[all] 
 RUN pip install jupyter jupyterhub ethercalc-python
 RUN pip install networkx==2.5.1
