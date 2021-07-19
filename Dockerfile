@@ -1,7 +1,7 @@
 FROM jupyter/datascience-notebook
 # FROM minidocks/graphviz
 
-RUN	sudo apt-get install git-annex -y
+
   
 RUN pip install papermill[all] 
 RUN pip install jupyter jupyterhub ethercalc-python
@@ -25,6 +25,7 @@ ENV HOME /home/${NB_USER}
 
 COPY . ${HOME}
 USER root
+RUN apt-get install git-annex -y
 RUN chown -R ${NB_UID} ${HOME}
 USER ${NB_USER}
 
