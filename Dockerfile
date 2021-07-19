@@ -25,7 +25,7 @@ ENV HOME /home/${NB_USER}
 
 COPY . ${HOME}
 USER root
-RUN apt-get update; apt-get install git-annex -y
+RUN apt-get update; apt-get install git-annex datalad -y
 RUN chown -R ${NB_UID} ${HOME}
 USER ${NB_USER}
 
