@@ -1,7 +1,7 @@
 #FROM jupyter/datascience-notebook
 FROM minidocks/graphviz
-
-
+USER root
+RUN apt-get update; apt-get install pip git-annex datalad -y
   
 RUN pip install papermill[all] 
 RUN pip install jupyter jupyterhub ethercalc-python
