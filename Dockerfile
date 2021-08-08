@@ -8,7 +8,7 @@ RUN pip install jupyter jupyterhub ethercalc-python
 RUN pip install networkx==2.5.1
 RUN pip install datalad
 RUN pip install graphillion graphviz
-# RUN pip install pygraphviz
+RUN pip install pygraphviz
 
 
 
