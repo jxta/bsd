@@ -1,5 +1,6 @@
-#FROM jupyter/datascience-notebook
-FROM minidocks/graphviz
+# FROM jupyter/datascience-notebook
+# FROM minidocks/graphviz
+FROM graphviz/graphviz
 USER root
 RUN apt-get update; apt-get install pip git-annex datalad -y
   
