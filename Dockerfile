@@ -1,5 +1,5 @@
-FROM jupyter/datascience-notebook
-# FROM minidocks/graphviz
+#FROM jupyter/datascience-notebook
+FROM minidocks/graphviz
 
 
   
