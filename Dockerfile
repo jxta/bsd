@@ -5,7 +5,8 @@ USER root
 # RUN apt-get update; apt-get install pip git-annex datalad graphviz -y
 RUN apt-get update; apt-get install pip graphviz -y
 # RUN pip install papermill[all] 
-RUN pip install jupyter jupyterhub ethercalc-python
+# RUN pip install jupyter jupyterhub ethercalc-python
+RUN pip install jupyter jupyterhub
 RUN pip install networkx==2.5.1
 # RUN pip install datalad
 RUN pip install graphillion graphviz
