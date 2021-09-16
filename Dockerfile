@@ -3,7 +3,7 @@ FROM jupyter/datascience-notebook
 
 USER root
 # RUN apt-get update; apt-get install pip git-annex datalad graphviz -y
-RUN apt-get update; apt-get install pipgraphviz -y
+RUN apt-get update; apt-get install pip graphviz -y
 # RUN pip install papermill[all] 
 RUN pip install jupyter jupyterhub ethercalc-python
 RUN pip install networkx==2.5.1
