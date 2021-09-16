@@ -2,12 +2,12 @@ FROM jupyter/datascience-notebook
 # FROM minidocks/graphviz
 
 USER root
-RUN apt-get update; apt-get install pip git-annex datalad graphviz -y
-  
-RUN pip install papermill[all] 
+# RUN apt-get update; apt-get install pip git-annex datalad graphviz -y
+RUN apt-get update; apt-get install pipgraphviz -y
+# RUN pip install papermill[all] 
 RUN pip install jupyter jupyterhub ethercalc-python
 RUN pip install networkx==2.5.1
-RUN pip install datalad
+# RUN pip install datalad
 RUN pip install graphillion graphviz
 #RUN pip install pygraphviz
 
@@ -26,7 +26,7 @@ ENV HOME /home/${NB_USER}
 
 COPY . ${HOME}
 USER root
-RUN apt-get update; apt-get install git-annex datalad -y
+# RUN apt-get update; apt-get install git-annex datalad -y
 RUN chown -R ${NB_UID} ${HOME}
 USER ${NB_USER}
 
